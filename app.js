@@ -5,9 +5,12 @@ function clock() {
   var seconds = fullDate.getSeconds();
   var time = "am";
 
+  if (hours >= 12) {
+    time = "pm";
+  }
+
   if (hours > 12) {
     hours = hours - 12;
-    time = "pm";
   }
 
   if (hours < 10) {
